@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:weightSum="10"
+    android:background="@color/colorBoton">
+
+    <ImageView
+        android:id="@+id/imagen_postre"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/nombre_postre"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:text="Nombre de la comida"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"/>
+</LinearLayout>
