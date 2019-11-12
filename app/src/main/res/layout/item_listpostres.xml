@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_height="250dp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="3dp">
+
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="250dp"
@@ -20,8 +28,9 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:text="Nombre de la comida"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
         android:gravity="center"/>
 </LinearLayout>
+</androidx.cardview.widget.CardView>

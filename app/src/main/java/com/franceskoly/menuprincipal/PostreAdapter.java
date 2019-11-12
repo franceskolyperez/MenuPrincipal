@@ -16,10 +16,13 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class PostreAdapter extends RecyclerView.Adapter<PostreAdapter.PostreViewHolder>{
+public class PostreAdapter extends RecyclerView.Adapter<PostreAdapter.PostreViewHolder>
+implements View.OnClickListener{
 
     ArrayList<Postre> listaPostre;
     Context context;
+
+    private View.OnClickListener listener;
 
     public PostreAdapter(ArrayList<Postre> listaPostre, Context context) {
         this.listaPostre = listaPostre;
@@ -36,6 +39,8 @@ public class PostreAdapter extends RecyclerView.Adapter<PostreAdapter.PostreView
         LayoutInflater inflater = LayoutInflater.from(mycContex);
         View view = inflater.inflate(IdLayoutName, parent,attachParentRapido);
 
+        view.setOnClickListener(this);
+
         PostreViewHolder holder = new PostreViewHolder(view);
         return holder;
     }
@@ -49,6 +54,17 @@ public class PostreAdapter extends RecyclerView.Adapter<PostreAdapter.PostreView
     @Override
     public int getItemCount() {
         return listaPostre.size();
+    }
+
+    public void setOnClikListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(listener!=null){
+            listener.onClick(v);
+        }
     }
 
     class PostreViewHolder extends RecyclerView.ViewHolder{
